@@ -110,13 +110,13 @@ public class Main {
 
         // TODO* calc sum only max and min values of matrix by expression: 2 < i <= 5 and only every third j value.
         int maxInt = twoDimensional[0][0], minInt = twoDimensional[0][0];
-        for (int i = 0; i < twoDimensional.length; i++) {
-            for (int j = 0; j < twoDimensional[i].length; j++) {
-                if (twoDimensional[i][j] >= 2) {
+        for (int[] ints : twoDimensional) {
+            for (int j = 0; j < ints.length; j++) {
+                if (ints[j] >= 2) {
                     if (j % 3 == 0) {
-                        maxInt = Math.max(maxInt, twoDimensional[i][j]);
-                        minInt = Math.min(minInt, twoDimensional[i][j]);
-                        sum += twoDimensional[i][j];
+                        maxInt = Math.max(maxInt, ints[j]);
+                        minInt = Math.min(minInt, ints[j]);
+                        sum += ints[j];
                     }
                 }
             }
